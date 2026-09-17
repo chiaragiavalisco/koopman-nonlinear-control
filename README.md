@@ -19,8 +19,8 @@ While $\mathbf{S}$ acts via function composition ($\mathbf{S}^k = \mathbf{S} \ci
 
 
 ```
-   States:  x_k  ──────── Flow Map S (Nonlinear) ───────>  x_{k+1}
-             │                                                │
+     States:  x_k  ──────── Flow Map S (Nonlinear) ───────>  x_{k+1}
+               │                                                │
 Eigenfunctions │ Koopman Modes                   Eigenfunctions │ Koopman Modes
 ▼                                                ▼
 Observables:  f(x_k) ───── Koopman Operator U (Linear) ────> f(x_{k+1})
