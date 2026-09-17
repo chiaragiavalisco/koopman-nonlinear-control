@@ -12,7 +12,7 @@ This repository contains the numerical implementations, benchmarks, and control 
 
 Traditional linearization techniques (such as Jacobian linearization) are strictly local around equilibrium points or nominal trajectories. In contrast, **Koopman Operator Theory** (Koopman, 1931; Koopman & von Neumann, 1932; Mezić, 2005) provides a global, linear, yet infinite-dimensional representation of nonlinear dynamical systems by shifting the perspective from state evolution to the evolution of **observable functions** $f \in \mathscr{F}$.
 
-For an autonomous discrete-time system $\mathbf{x}_{k+1} = \mathbf{S} (\mathbf{x}_k)$, the Koopman operator $\mathcal{U}$ acts via composition:
+For an autonomous discrete-time system $\mathbf{x}_ {k+1} = \mathbf{S} (\mathbf{x}_ k)$, the Koopman operator $\mathcal{U}$ acts via composition:
 $$\mathcal{U} f = f \circ \mathbf{S} \quad \implies \quad f(\mathbf{x}_{k+1}) = \mathcal{U} f(\mathbf{x}_k)$$
 
 While $\mathbf{S}$ acts via function composition ($\mathbf{S}^k = \mathbf{S} \circ \dots \circ \mathbf{S}$), $\mathcal{U}$ evolves linearly via exponentiation ($\mathcal{U}^k f = \mathcal{U} \cdot \dots \cdot \mathcal{U} f$). This enables the deployment of linear estimation, spectral analysis, and optimal control techniques (e.g., LQR) on inherently nonlinear systems without local approximations.
@@ -24,7 +24,6 @@ While $\mathbf{S}$ acts via function composition ($\mathbf{S}^k = \mathbf{S} \ci
    States:  x_k  ──────── Flow Map S (Nonlinear) ───────>  x_{k+1}
              │                                                │
 
-```
 
 Eigenfunctions │ Koopman Modes                   Eigenfunctions │ Koopman Modes
 ▼                                                ▼
