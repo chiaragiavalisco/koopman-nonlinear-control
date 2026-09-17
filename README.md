@@ -48,7 +48,7 @@ Observables:  f(x_k) ───── Koopman Operator U (Linear) ────> f
 
 * **Dynamics:** Limit cycle attractor ($\mu = 1$) sampled outside the limit cycle over $t \in [0, 0.4]$ ($\Delta t = 0.02$).
 * **Methods Evaluated:**
-* **Standard DMD:** Fails to sustain oscillations; falsely characterizes the system as a continuous spiral sink ($\operatorname{Tr}(\mathbf{A}) \approx -2.81$, $\operatorname{det}(\mathbf{A}) \approx 2.92$).
+* **Standard DMD:** Fails to sustain oscillations; falsely characterizes the system as a continuous spiral sink ($\text{Tr}(\mathbf{A}) \approx -2.81$, $\text{det}(\mathbf{A}) \approx 2.92$).
 * **EDMD (Degree-3 Polynomial):** Improves short-term reconstruction but diverges rapidly out-of-sample (OOS).
 * **EDMD (Gaussian RBF Kernel, $\varepsilon = 0.17$):** Yields accurate phase-portrait reconstruction and stable long-term predictions by capturing localized nonlinearities.
 
@@ -59,7 +59,7 @@ Observables:  f(x_k) ───── Koopman Operator U (Linear) ────> f
 * **Dynamics:** Forced oscillator $\ddot{x} - \mu(1 - x^2)\dot{x} + x = u$ with actuation in $x_2$.
 * **Methodology:**
 * System identification via **EDMDc** using a targeted dictionary $\mathcal{D} = \{x_1, x_2, x_1^2, x_1^2 x_2\}$.
-* Closed-loop stabilization using a **Linear Quadratic Regulator (LQR)** penalizing physical states $\mathbf{Q} = \operatorname{diag}(1, 1, 0, 0)$ with input penalty $R = 10^{-2}$.
+* Closed-loop stabilization using a **Linear Quadratic Regulator (LQR)** penalizing physical states $\mathbf{Q} = \text{diag}(1, 1, 0, 0)$ with input penalty $R = 10^{-2}$.
 
 
 * **Result:** Drives arbitrary initial conditions from the uncontrolled limit cycle directly to the unstable origin $\mathbf{x}^* = (0, 0)$ over $t \in [0, 5]$.
